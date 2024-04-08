@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
 /**
- * factorial with out using multiplication operator
+Question 1: Write a program to calculate the factorial of the given number without using multiplication
+or division operators
  */
 public class factorial {
 public static void main(String[] args) {
@@ -17,6 +18,5 @@ public static void main(String[] args) {
         ans=sum;
     }
     System.out.println(ans);
-}
-    
+}   
 }
