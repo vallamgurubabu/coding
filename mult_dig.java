@@ -18,6 +18,7 @@ public class mult_dig {
    public static void main(String[] args) {
     Scanner s=new Scanner(System.in);
     int n=s.nextInt();
+    s.close();
     int price=1;
     while(n>0){
         int dig=n%10;
