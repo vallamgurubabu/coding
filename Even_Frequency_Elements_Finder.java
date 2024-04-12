@@ -1,5 +1,9 @@
 /*Problem Statement:
 Write a Java program that takes an array of integers as input and prints all elements that occur an even number of times in the array.
+Input:
+Array: [1, 2, 3, 2, 4, 1, 3, 5, 4]
+Output:
+1 2 3 4
 
 Example:
 Given an array [1, 2, 3, 2, 4, 1, 3, 5, 4], the program should output 1 2 3 4, as these elements occur twice in the array.
@@ -19,6 +23,7 @@ public class Even_Frequency_Elements_Finder {
         for(int i=0;i<n;i++){
             arr[i]=s.nextInt();
         }
+        s.close();
         HashMap<Integer,Integer> hm =new HashMap<>();
         for(int i=0;i<n;i++){
             if(hm.containsKey(arr[i])==true){
