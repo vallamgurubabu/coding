@@ -21,7 +21,7 @@ public class DistinctXORSubarrays {
             int xor = 0;
             // Iterate through each ending index starting from i
             for (int j = i; j < n; j++) {
-                xor ^= arr[j]; // Update xor by XORing it with current element
+                xor |= arr[j]; // Update xor by XORing it with current element
                 distinctXORs.add(xor); // Add xor to HashSet
             }
         }

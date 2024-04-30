@@ -18,22 +18,22 @@ public class student {
         ArrayList<Integer>Grade_convert=new ArrayList<>();
         ArrayList <String> arr=new ArrayList<>();
         for (int i = 0; i < n; i++) {
-              if(Integer.parseInt(details[i][1])>20 && details[i][3].equals("M")){
+              if(Integer.parseInt(details[i][1])>20){
                 arr.add(details[i][0]);
-              }
-              if(Integer.parseInt(details[i][1])>20 && details[i][3].equals("F")){
                 int value = (int)details[i][2].charAt(0);
                 Grade_convert.add(value);
-              } 
+              }
         }
-        System.out.println("MALE NAMES WHOS AGE IS GREATER THAN 22");
+        System.out.println("STUDENT NAMES WHOS AGE IS GREATER THAN 22");
         for(String i : arr){
             System.out.print(i+" ");
         }
-        System.out.println("\nFEMALE GRADES IN ASCII VALUE WHOS AGE IS GREATER THAN 22 ");
+        System.out.println("\nAverage GRADE IN ASCII VALUE WHOS AGE IS GREATER THAN 22 ");
+        int avg=0;
         for(int i : Grade_convert){
-            System.out.print(i+ " ");
+            avg+=i;
         }
+        System.out.println(avg/n);
         s.close();
     }
 }
