@@ -10,7 +10,7 @@ public class student {
         System.out.println("Enter Student Details for each student (Name Age Grade Gender)");
         for (int i = 0; i < n; i++) {
             String line = s.nextLine();
-            String[] studentDetails = line.split("\\s+");
+            String[] studentDetails = line.split(" ");
             for (int j = 0; j < 4; j++) {
                 details[i][j] = studentDetails[j];
             }
@@ -24,11 +24,11 @@ public class student {
                 Grade_convert.add(value);
               }
         }
-        System.out.println("STUDENT NAMES WHOS AGE IS GREATER THAN 22");
+        System.out.println("STUDENT NAMES WHOS AGE IS GREATER THAN 20");
         for(String i : arr){
             System.out.print(i+" ");
         }
-        System.out.println("\nAverage GRADE IN ASCII VALUE WHOS AGE IS GREATER THAN 22 ");
+        System.out.println("\nAverage GRADE IN ASCII VALUE WHOS AGE IS GREATER THAN 20 ");
         int avg=0;
         for(int i : Grade_convert){
             avg+=i;

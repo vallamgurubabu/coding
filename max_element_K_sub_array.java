@@ -19,7 +19,6 @@ public class max_element_K_sub_array {
             max=Math.max(max, arr[j]);
             j++;
         }
-        j=j-1;
         System.out.print(max+" ");
     }
    }

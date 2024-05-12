@@ -1,7 +1,7 @@
 /*Write a program to find non repeating element in an array (Uniqu
 elements)
 
-nput: Size of Array, Array
+input: Size of Array, Array
 Output: Non repeating elements
 
 Example:

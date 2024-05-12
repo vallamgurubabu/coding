@@ -1,24 +1,31 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class max_priority {
     public static void main(String[] args) {
         Scanner s= new Scanner(System.in);
         int n = s.nextInt();
         int arr[]=new int [n];
+        HashMap<Integer,Integer>hm=new HashMap<>();
         for(int i=0;i<n;i++){
             arr[i]=s.nextInt();
         }
-        int max_priority=Integer.MIN_VALUE;
-        s.close();
-        for(int i=0;i<n/2;i++){
-            max_priority=Math.max(max_priority, arr[i]);
+        for(int i=0;i<n;i++){
+            if(hm.containsKey(arr[i])==true){
+                int temp=hm.get(arr[i]);
+                hm.put(arr[i],temp+1);
+            }else{
+                hm.put(arr[i],1);
+            }
         }
-        int count=0;
-        for(int i=0;i<n/2;i++){
-            if(max_priority==arr[i]){
-                count++;
-            }        
-        }
-        System.out.println(count);
+         s.close();
+         for(int i : hm.keySet()){
+            // System.out.println(hm.get(i)+"->"+i);
+            if(hm.get(i)>n/2){
+                System.out.print(i);
+            }
+         }
+         
+        
+    
     }
 }
